@@ -1,5 +1,5 @@
-@use "./conpoment/palette.scss"as *;
-@use "./conpoment/mixin.scss"as *;
+@use "./conpoment/palette.scss" as *;
+@use "./conpoment/mixin.scss" as *;
 
 * {
   font-family: "Pushster", cursive;
@@ -198,12 +198,12 @@ video {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template: 1fr 1fr  / 1fr 1fr 1fr;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
     grid-template-areas:
       "title img img"
       "desc img img";
-      row-gap:100px;
-      &--title {
+    row-gap: 100px;
+    &--title {
       grid-area: title;
       text-align: center;
       color: red;
@@ -224,7 +224,7 @@ video {
       margin: 10px 0 0 10vw;
     }
 
-    &--details{
+    &--details {
       display: none;
     }
   }
@@ -241,6 +241,72 @@ video {
         height: 30vh;
         transform: rotate(34deg);
         margin-left: 10px;
+      }
+    }
+  }
+}
+
+.skill {
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  &__title {
+    text-align: center;
+    font-size: 12em;
+    transform: rotate(-40deg);
+  }
+  &__element {
+    @include flex(flex, space-evenly, center) {
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    &--child {
+      background-color: $color;
+      color: $bg;
+      width: 20vw;
+      height: 25vh;
+      border-radius: 15px;
+      padding: 10px;
+      box-shadow: 5px 7px 5px #555050a9;
+
+      &--title {
+        font-size: 3em;
+        margin: 0;
+      }
+
+      &--progress {
+        background-color: #bcb3b3d3;
+        width: inherit;
+        height: 30px;
+        border-radius: 10px;
+        margin: 20px 0;
+
+        &-child {
+          height: 30px;
+          transition: all 0.6s;
+          border-radius: 10px;
+          background-color: red;
+          span {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    &__title{
+    font-size: 9em;
+
+    }
+    &__element {
+      display: grid;
+      grid-template: 1fr/1fr;
+      justify-items: center;
+      &--child{
+        width: 70%;
+        height: 20vh;
       }
     }
   }

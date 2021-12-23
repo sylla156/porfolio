@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './conpoment/Header'
 import Project from "./conpoment/Project"
+import Skill from './conpoment/Skill'
 export default class App extends Component {
 
     constructor(props){
@@ -12,6 +13,7 @@ export default class App extends Component {
             <>
             <Header/>
             <Project/>
+            <Skill/>
             </>
         );
     }
