@@ -1,0 +1,246 @@
+@use "./conpoment/palette.scss"as *;
+@use "./conpoment/mixin.scss"as *;
+
+* {
+  font-family: "Pushster", cursive;
+}
+
+body {
+  color: $color;
+  background-color: $bg;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.header {
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+
+  @include flex(flex, center, start) {
+    flex-direction: column;
+  }
+
+  &__first {
+    height: 10%;
+    width: 100vw;
+    @include flex(flex, space-evenly, center);
+
+    &--title {
+      width: 20%;
+      margin: 0 0 0 10px;
+      color: red;
+    }
+
+    &--nav {
+      width: 80%;
+      @include flex(flex, space-evenly, end);
+
+      a {
+        @include link;
+      }
+    }
+
+    &--btnNav {
+      display: none;
+    }
+
+    @include mobile {
+      &--nav {
+        display: none;
+      }
+
+      &--btnNav {
+        display: block;
+        width: 70%;
+
+        @include flex(flex, center, end) {
+          flex-direction: column;
+        }
+
+        &--element {
+          background-color: #fff;
+          width: 10%;
+          border-bottom: 2px solid $color;
+          padding: 0;
+          margin: 5px;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__second {
+    height: 90%;
+    width: 90vw;
+    margin: 0 0 0 10vw;
+    @include flex(flex, center, end);
+
+    &--element {
+      height: 30%;
+      width: 40vw;
+      font-size: 1.5em;
+    }
+  }
+
+  &__btnNav {
+    display: none;
+  }
+
+  @include mobile {
+    &__nav {
+      display: none;
+    }
+
+    &__btnNav {
+      display: block;
+      width: 70%;
+
+      @include flex(flex, center, end) {
+        flex-direction: column;
+      }
+
+      &--element {
+        background-color: #fff;
+        width: 10%;
+        border-bottom: 2px solid $color;
+        padding: 0;
+        margin: 5px;
+        outline: none;
+      }
+    }
+
+    &__second {
+      @include flex(flex, center, end);
+      margin-top: 10px;
+
+      &--element {
+        height: 30%;
+        width: 90vw;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.navbar {
+  background-color: $color;
+  width: 0.001px;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  right: 0;
+  transition: all 0.5s;
+
+  &__exit {
+    &--element1 {
+      border-bottom: 2px solid black;
+      width: 10%;
+      transform: rotate(-45deg);
+      display: inline-block;
+      margin-top: 20px;
+      position: absolute;
+      left: 0;
+    }
+
+    &--element2 {
+      border-bottom: 2px solid black;
+      width: 10%;
+      transform: rotate(45deg);
+      margin-top: 20px;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__link {
+    margin: 50px auto;
+    width: 50%;
+
+    @include flex {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    a {
+      @include link($bg);
+      font-size: 0em;
+      transition: all 0.5s;
+    }
+  }
+}
+
+video {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  background-color: $bg;
+}
+
+.project {
+  margin-top: 100px;
+  &__title {
+    text-align: end;
+    font-style: italic;
+    font-size: 4.5em;
+    margin-right: 100px;
+  }
+
+  &__first {
+    transition: all 0.5s;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr 1fr  / 1fr 1fr 1fr;
+    grid-template-areas:
+      "title img img"
+      "desc img img";
+      &--title {
+      grid-area: title;
+      text-align: center;
+      color: red;
+      font-size: 2em;
+    }
+
+    &--img {
+      grid-area: img;
+      background-image: url("../../public/img/ok.jpg");
+      background-size: cover;
+      width: 50vw;
+      height: 48vh;
+      transform: rotate(20deg);
+    }
+
+    &--desc {
+      grid-area: desc;
+      margin: 10px 0 0 10vw;
+    }
+
+    &--details{
+      display: none;
+    }
+  }
+
+  @include mobile {
+    &__first {
+      grid-template-areas:
+        "title title tile"
+        "img img img"
+        "desc desc desc";
+
+      &--img {
+        width: 80vw;
+        height: 30vh;
+        transform: rotate(34deg);
+        margin-left: 10px;
+      }
+    }
+  }
+}
