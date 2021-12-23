@@ -14,6 +14,7 @@ export default class App extends Component {
             <Header/>
             <Project/>
             <Skill/>
+            <contact/>
             </>
         );
     }
