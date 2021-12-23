@@ -431,3 +431,34 @@ overflow: hidden;
   }
 
 }
+
+
+.footer{
+  width: 100vw;
+  height: 20vh;
+  @include flex;
+  &__nav{
+    width: 80vw;
+    @include flex(flex,space-evenly,center);
+    height: 20vh;
+    &--element{
+      a{
+        font-size: 0.9em;
+        @include link;
+      }
+    }
+  }
+}
+
+p.hr{
+  width: 100%;
+  border-top: 1px solid $color;
+}
+
+@include mobile{
+  .footer{
+    &__nav{
+      width: 100vw;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import Project from "./conpoment/Project"
 import Skill from './conpoment/Skill'
 import Contact from './conpoment/Contact'
 import About from "./conpoment/About"
+import Footer from './conpoment/Footer'
 export default class App extends Component {
 
     constructor(props){
@@ -36,6 +37,7 @@ export default class App extends Component {
        
             <Contact contact={this.state.contact} />
             <About about={this.state.about} />
+            <Footer/>
             </>
         );
     }
