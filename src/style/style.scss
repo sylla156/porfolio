@@ -215,9 +215,11 @@ video {
 
     &--img {
       grid-area: img;
-      background-image: url("../../public/img/ok.jpg");
+      background-image: url("../../public/img/project.jpg");
       background-size: cover;
-      width: 50vw;
+      min-width: 50vw;
+      max-width: 60vw;
+      width: auto;
       height: 48vh;
       transform: rotate(20deg);
     }
