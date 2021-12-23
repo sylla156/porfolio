@@ -7,6 +7,9 @@ export default class Header extends Component {
     this.navIn = this.navIn.bind(this);
     this.reload = this.reload.bind(this);
     this.contact = this.contact.bind(this);
+    this.about = this.about.bind(this);
+    this.project = this.project.bind(this);
+
   }
 
   navIn() {
@@ -40,8 +43,18 @@ export default class Header extends Component {
   contact(e){
     this.props.contact(e);
   }
+  about(e){
+    this.props.about(e);
+  }
 
+  project(e){
+    e.preventDefault();
+    this.navOut();
+    setTimeout(() =>{
 
+      document.querySelector('.projectClick').click();
+    },500)
+  }
   reload(){
     window.location.reload();
   }
@@ -53,10 +66,10 @@ export default class Header extends Component {
           <div className="header__first--title" onClick={this.reload}>sylla ibrahim</div>
           <nav className="header__first--nav">
             <p className="header__first--nav--element">
-              <a href="#project">project</a>
+              <a href="#project" className='projectClick'>project</a>
             </p>
             <p className="header__first--nav--element">
-              <a href="">about</a>
+              <a href="" onClick={this.about}>about</a>
             </p>
             <p className="header__first--nav--element">
               <a href="" onClick={this.contact}>contact</a>
@@ -93,8 +106,13 @@ export default class Header extends Component {
               </a>
             </p>
             <p className="navbar__link--element">
-              <a className="navLink" href="/">
+              <a className="navLink" href="" onClick={this.project}>
                 project
+              </a>
+            </p>
+            <p className="navbar__link--element ">
+              <a className="navLink" href="/"  onClick={this.about}>
+                about
               </a>
             </p>
             <p className="navbar__link--element ">

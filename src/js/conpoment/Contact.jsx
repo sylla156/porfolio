@@ -13,15 +13,20 @@ export default class Contact extends Component {
     slide(){
         let contact = document.querySelector(".wrapper");
        
-        if(window.innerWidth <= 800){
+        if(window.innerWidth <= 500){
         document.querySelector(".reslide").click()
         }
         contact.style.transform = 'translateX(0vw)'
+        document.body.style.overflow = "hidden"
+
     }
 
     reSlide(){
         let contact = document.querySelector(".wrapper");
         contact.style.transform = 'translateX(-100vw)';
+        document.body.style.overflowY = "scroll"
+
+
        
     }
 
