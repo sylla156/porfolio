@@ -383,21 +383,21 @@ overflow: hidden;
 .about{
   height:100vh;
   position: absolute;
+  margin: 0 !important;
   top: 0;
-  width: 100vw;
   background-color: $bg;
   transform: translateY(-300vw);
   transition: all 1s;
   z-index: 1000;
   &__desc{
-padding: 20px 50px;
+    margin: 20px;
     &--title{
       font-size: 2.5em;
     }
 
     &--details{
       font-size: 1.1em;
-      padding: 30px;
+      padding: 50px;
     }
 
     &--motive{
@@ -409,11 +409,12 @@ padding: 20px 50px;
 
 @include mobile{
   .about{
-    padding: 20px;
+    margin: 20px 5px;
     width: 80vw;
     overflow: hidden;
     &__desc{
       text-align:center;
+      padding: 0;
       &--title{
         font-size: 3em;
         margin: 0;
@@ -421,7 +422,11 @@ padding: 20px 50px;
       &--details{
         text-align: center;
         font-size: 1.5em;
+        text-align: center;
+        padding: 0;
+        font-size: 1em;
       }
+      
     }
   }
 

@@ -8,7 +8,8 @@ export default class About extends Component {
   slide(e) {
     let about = document.querySelector(".about");
     if (about !== undefined) {
-      about.style.transform = "translateX(0vw)";
+      about.style.transform = "translateY(0vw)";
+      about.style.width = innerWidth + "px";
       document.body.style.overflow = "hidden";
       if (window.innerWidth <= 500) {
         document.querySelector(".reslide").click();
@@ -20,6 +21,7 @@ export default class About extends Component {
     let about = document.querySelector(".about");
     if (about !== undefined) {
       about.style.transform = "translateY(-300vw)";
+
       document.body.style.overflow = "hidden";
       document.body.style.overflowY = "scroll";
     }
@@ -46,8 +48,7 @@ export default class About extends Component {
           <p className="about__desc--details">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas,
             sequi tempora modi ullam id, praesentium, reprehenderit minus
-            voluptas deleniti repudiandae facilis debitis perspiciatis. In unde
-            molestias sed nam porro neque!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam iure facilis ratione, et rerum illo repudiandae minima rem qui sed praesentium a, porro amet ex eum nisi. Quae, earum facilis!
           </p>
           <h1 className="about__desc--motive">your project my goal</h1>
 
