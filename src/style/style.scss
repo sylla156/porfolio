@@ -202,7 +202,10 @@ video {
     grid-template-areas:
       "title img img"
       "desc img img";
+<<<<<<< HEAD
       row-gap:100px;
+=======
+>>>>>>> dbbef836c3fb174ec16f2d8a5f745e65b29bf54b
       &--title {
       grid-area: title;
       text-align: center;

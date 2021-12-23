@@ -8,7 +8,11 @@ export default class Project extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
       <main className="project" id="project">
+=======
+      <main className="project">
+>>>>>>> dbbef836c3fb174ec16f2d8a5f745e65b29bf54b
         <h1 className="project__title">my project</h1>
         <div className="project__first" >
           <h2 className="project__first--title">e-commerce</h2>

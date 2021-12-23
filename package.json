@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "dir",
+<<<<<<< HEAD
     "start": "parcel --no-cache public/index.html",
     "build" : "parcel build public/index.html"
+=======
+    "start": "parcel --no-cache public/index.html"
+>>>>>>> dbbef836c3fb174ec16f2d8a5f745e65b29bf54b
   },
   "repository": {
     "type": "git",
