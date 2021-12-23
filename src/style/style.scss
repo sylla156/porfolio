@@ -12,6 +12,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  width: 100vw !important;
 }
 
 .header {
@@ -294,4 +295,87 @@ overflow: hidden;
      }
    }
  }
+}
+
+
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background-color: $bg;
+  transform: translateX(-100vw);
+  transition: all 1s;
+}
+
+.container{
+  width: 60vw;
+  margin: 0 0 0 100px;
+
+  h1{
+    font-style: 3.5em;
+    margin: 0;
+  }
+
+  p{
+    font-size: 1.5em;
+    margin: 0;
+  }
+}
+
+.container-fluid{
+  width: 60vw;
+  margin: 0;  
+}
+
+.btnExit{
+  font-size: 3.5em;
+  padding: 10px;
+  border: 1px solid $color;
+  width: 10%;
+  text-align:center;
+  margin: 10px;
+  &:hover{
+    color: red;
+    border: 1px solid red;
+  }
+}
+
+@include mobile{
+  .wrapper{
+    overflow: hidden;
+  }
+
+  .container{
+    width: 100vw;
+    margin: 0 0 0 10px;
+
+    h1{
+      font-size: 1.5em;
+    }
+    p{
+      font-size: 1.2em;
+    }
+  }
+  .container-fluid{
+    width: 100vw;
+  }
+
+  .btnExit{
+    font-size: 2em;
+    padding: 10px 30px 10px 20px;
+  }
+
+  div.hero-content{
+    margin: 0;
+  }
+
+  div.textarea{
+    
+  }
+}
+
+a:hover{
+  color: red;
 }

@@ -6,6 +6,7 @@ export default class Header extends Component {
     this.navOut = this.navOut.bind(this);
     this.navIn = this.navIn.bind(this);
     this.reload = this.reload.bind(this);
+    this.contact = this.contact.bind(this);
   }
 
   navIn() {
@@ -36,6 +37,9 @@ export default class Header extends Component {
       item.style.fontSize = "0em";
     });
   }
+  contact(e){
+    this.props.contact(e);
+  }
 
 
   reload(){
@@ -55,10 +59,10 @@ export default class Header extends Component {
               <a href="">about</a>
             </p>
             <p className="header__first--nav--element">
-              <a href="">contact</a>
+              <a href="" onClick={this.contact}>contact</a>
             </p>
           </nav>
-          <div className="header__btnNav active" onClick={this.navIn}>
+          <div className="header__btnNav active reslide" onClick={this.navIn}>
             <p className="header__btnNav--element"></p>
             <p className="header__btnNav--element"></p>
             <p className="header__btnNav--element"></p>
@@ -90,11 +94,11 @@ export default class Header extends Component {
             </p>
             <p className="navbar__link--element">
               <a className="navLink" href="/">
-                tt project
+                project
               </a>
             </p>
-            <p className="navbar__link--element">
-              <a className="navLink" href="/">
+            <p className="navbar__link--element ">
+              <a className="navLink" href="/"  onClick={this.contact}>
                 contact
               </a>
             </p>
