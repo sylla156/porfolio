@@ -1,0 +1,19 @@
+@use "./palette" as pallete;
+
+@mixin flex($type: flex, $jc: center, $ai: center) {
+  display: $type;
+  justify-content: $jc;
+  align-items: $ai;
+  @content;
+}
+
+@mixin link($color:pallete.$color) {
+  color: $color;
+  text-decoration: none;
+}
+
+@mixin mobile {
+  @media all and (orientation: portrait) and (min-width: 0px) and (max-width:812px) {
+    @content;
+  }
+}

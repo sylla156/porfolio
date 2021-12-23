@@ -1,0 +1,33 @@
+{
+  "name": "porfolio-2",
+  "version": "1.0.0",
+  "description": "mon porfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "dir",
+    "start": "parcel --no-cache public/index.html",
+    "build" : "parcel build public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sylla156/porfolio.git"
+  },
+  "author": "sylla ibrahim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sylla156/porfolio/issues"
+  },
+  "homepage": "https://github.com/sylla156/porfolio#readme",
+  "dependencies": {
+    "locomotive-scroll": "^4.1.3",
+    "parcel-bundler": "^1.12.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-locomotive-scroll": "^0.2.0",
+    "react-simple-typewriter": "^3.0.1",
+    "typewriter-effect": "^2.18.2"
+  },
+  "devDependencies": {
+    "sass": "^1.45.1"
+  }
+}
