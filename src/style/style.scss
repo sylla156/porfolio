@@ -5,6 +5,29 @@
   font-family: "Pushster", cursive;
 }
 
+a{
+  cursor: none;
+}
+.cursor {
+  width:25px;
+  height:25px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  background:$color;
+  transition: all 0.15s;
+  mix-blend-mode: difference;
+}
+
+@include mobile{
+  .cursor{
+    display: none;
+  }
+}
+
+.ppl:hover .cursor{
+  background-color:black;
+}
 body {
   color: $color;
   background-color: $bg;
@@ -13,7 +36,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   width: 100vw !important;
-
+  cursor: none;
  overflow: hidden;
 }
 

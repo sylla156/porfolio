@@ -66,9 +66,9 @@ export default class Header extends Component {
           <div className="header__first--title" onClick={this.reload}>sylla ibrahim</div>
           <nav className="header__first--nav">
             <p className="header__first--nav--element">
-              <a href="#project" className='projectClick'>project</a>
+              <a href="#project" className='projectClick ppl'>project</a>
             </p>
-            <p className="header__first--nav--element">
+            <p className="header__first--nav--element ppl">
               <a href="" onClick={this.about}>about</a>
             </p>
             <p className="header__first--nav--element">

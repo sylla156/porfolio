@@ -32,7 +32,7 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <LocomotiveScrollProvider options={{ smooth: true,}}>
+        <LocomotiveScrollProvider options={{ smooth: true }}>
           <main data-scroll-container>
             <Header contact={this.contact} about={this.about} />
             <Project />

@@ -17,7 +17,15 @@
   </head>
   <body>
       <div id="app"></div>
+      <div class="cursor"></div>
       <video src="./video/video.mp4" autoplay muted loop></video>
-     
+     <script>
+               var cursor = document.querySelector(".cursor");
+        document.addEventListener('mousemove', e=>{
+            cursor.style.top = e.pageY + "px"
+            cursor.style.left = e.pageX+"px"
+            
+        })  
+     </script>
   </body>
 </html>
