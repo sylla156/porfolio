@@ -10,7 +10,6 @@ export default class About extends Component {
     if (about !== undefined) {
       about.style.transform = "translateY(0vw)";
       about.style.width = innerWidth + "px";
-      document.body.style.overflow = "hidden";
       if (window.innerWidth <= 500) {
         document.querySelector(".reslide").click();
       }
@@ -22,8 +21,6 @@ export default class About extends Component {
     if (about !== undefined) {
       about.style.transform = "translateY(-300vw)";
 
-      document.body.style.overflow = "hidden";
-      document.body.style.overflowY = "scroll";
     }
   }
 

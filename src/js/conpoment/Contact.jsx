@@ -23,14 +23,12 @@ export default class Contact extends Component {
         document.querySelector(".reslide").click()
         }
         contact.style.transform = 'translateX(0vw)'
-        document.body.style.overflow = "hidden"
 
     }
 
     reSlide(){
         let contact = document.querySelector(".wrapper");
         contact.style.transform = 'translateX(-100vw)';
-        document.body.style.overflowY = "scroll"
 
 
        
