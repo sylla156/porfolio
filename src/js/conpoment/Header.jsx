@@ -97,6 +97,7 @@ export default class Header extends Component {
         <div className="navbar">
           <div className="navbar__exit" onClick={this.navOut}>
             <p className="navbar__exit--element1"></p>
+            
             <p className="navbar__exit--element2"></p>
           </div>
           <div className="navbar__link">

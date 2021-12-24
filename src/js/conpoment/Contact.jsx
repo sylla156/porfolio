@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Header from './Header'
 import '../../style/style.css'
 export default class Contact extends Component {
     
@@ -7,6 +6,13 @@ export default class Contact extends Component {
         
         super(props);
         this.reSlide = this.reSlide.bind(this);
+        this.state = {
+            name:"",
+            email:"",
+            textarea : ""
+        }
+
+        this.hanbleChange = this.hanbleChange.bind(this);
     }
 
 
@@ -29,6 +35,24 @@ export default class Contact extends Component {
 
        
     }
+
+    hanbleChange(e){
+        let type = e.target.type;
+        switch(type){
+            case 'text':
+                this.setState({name:e.target.value})
+                break;
+            case 'email':
+                this.setState({email:e.target.value})
+                break;
+            case 'textarea':
+                this.setState({textarea:e.target.value})
+                break;
+            default:
+            console.log('merde');
+        }
+    }
+
 
 contact(e){
     if(e === undefined){
@@ -69,31 +93,33 @@ contact(e){
         <div className="container-fluid">
             <div className="row">
                 <div className="col-lg-8">
-                    <form name="contact-form" id="contact-form" method="POST" action="">
+                    <form name="contact-form" id="contact-form" action="mailto:info@w3docs.com" method="get" enctype="text/plain">
                         <ul>
                             <li className="wow fadeInUp" data-wow-delay="1.4s">
                                 <label htmlFor="contact-name">Name: </label>
                                 <div className="textarea">
-                                    <input type="text" name="contact-name" id="contact-name" value="" required />
+                                    <input type="text" name="contact-name" id="contact-name" value={this.state.name} onChange={this.hanbleChange} required />
                                 </div>
                             </li>
 
                             <li className="wow fadeInUp" data-wow-delay="1.6s">
                                 <label htmlFor="contact-email">Email: </label>
                                 <div className="textarea">
-                                    <input type="email" name="contact-name" id="contact-email" value="" required />
+                                    <input type="email" name="contact-name" id="contact-email" value={this.state.email} onChange={this.hanbleChange} required />
                                 </div>
                             </li>
 
                             <li className="wow fadeInUp" data-wow-delay="1.6s">
                                 <label htmlFor="contact-project">Message: </label>
                                 <div className="textarea"   >
-                                    <textarea type="email" name="contact-project" id="contact-project" rows="4" value="" required></textarea>
+                                    <textarea type="email" name="contact-project" id="contact-project" rows="4" value={this.state.textarea} onChange={this.hanbleChange} required></textarea>
                                 </div>
                             </li>
                         </ul>
 
-                        <button type="submit" name="contact-submit" id="contact-submit" className="send wow fadeInUp">Send Message</button>
+                        <button type="submit" name="contact-submit" id="contact-submit" className="send wow fadeInUp" onClick={(e)=>{
+                            window.location.reload()
+                        }}>Send Message</button>
                     </form>
                 </div>
             </div>
