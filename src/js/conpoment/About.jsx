@@ -46,13 +46,12 @@ export default class About extends Component {
         <div className="about__desc">
           <h1 className="about__desc--title">sylla ibrahim</h1>
           <p className="about__desc--details">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas,
-            sequi tempora modi ullam id, praesentium, reprehenderit minus
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam iure facilis ratione, et rerum illo repudiandae minima rem qui sed praesentium a, porro amet ex eum nisi. Quae, earum facilis!
+          I am a software engineer in the third year of study I have a passion for website and mobile development. So with my skills as a full stack developer, I can only offer you the best and the most wonderful of websites.
+contact me so that we can discuss your project
           </p>
           <h1 className="about__desc--motive">your project my goal</h1>
 
-          <p className="about__desc--contact">iblamerbeille@ddd</p>
+          <p className="about__desc--contact"><b><i>syllaibrahim7727@gmail.com</i></b></p>
         </div>
       </div>
     );

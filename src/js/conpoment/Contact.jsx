@@ -76,11 +76,11 @@ contact(e){
 
                 <div className="row">
                     <div className="col-lg-8">
-                        <h1 className="" data-wow-delay="1s">say hello👋</h1>
+                        <h1 className="" data-wow-delay="1s">sI have the solution👋</h1>
                         <br/>
                         <p className="wow fadeInUp" data-wow-delay="1.2s">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Neque, accusantium sint quod voluptatem dolorum, quaerat, 
+                        It is through contact with others that man learns what he knows.
+thank you for contacting me for your project or who knows
                           
                         </p>
                     </div>
