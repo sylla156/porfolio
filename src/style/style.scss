@@ -13,6 +13,25 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   width: 100vw !important;
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px #f5f5f5;
+    background-color: #000000;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    background-color: #000000;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #000000;
+  }
+}
+
+#app{
+  min-height: 100vh;
+  height: auto;
 }
 
 .header {
@@ -188,7 +207,7 @@ video {
 .project {
   margin-top: 100px;
   transition: all 1s;
-
+  overflow: hidden;
   &__title {
     text-align: end;
     font-style: italic;
@@ -243,7 +262,7 @@ video {
         "desc desc desc";
 
       &--img {
-        width: 80vw;
+        max-width: 100vw;
         height: 30vh;
         transform: rotate(34deg);
         margin-left: 10px;
@@ -253,58 +272,68 @@ video {
 }
 
 .skill {
- @include flex(flex,center,center){
-   flex-direction: column;
- };
-overflow: hidden;
- &__title{
-   font-size: 10em;
-   transform: rotate(-40deg);
-   text-align: start;
-   align-self: flex-end;
- }
+  @include flex(flex, center, center) {
+    flex-direction: column;
+  }
+  overflow: hidden;
+  &__title {
+    font-size: 10em;
+    transform: rotate(-40deg);
+    text-align: start;
+    align-self: flex-end;
+  }
 
- &__element{
-   @include flex(flex,space-evenly,center);
-   width: 100vw;
-   margin: 0;
-   &--front, &--back{
-     width:50vw;
-     margin: 0;
-     text-align: center;
-     font-size: 2.5em;
-     @include flex{
-       flex-direction: column;
-     };
-     &--skill{
-       font-size: 0.5em;
-       background-color: #343452;
-       width:30%;
-       border-radius: 10px;
-       line-height:none;
-     }
-   }
-
+  &__element {
+    @include flex(flex, space-evenly, center);
+    width: 100vw;
+    margin: 0;
    
- }
- @include mobile{
-   &__element{
-     @include flex{
-       flex-direction: column;
-     }
-
-     &--front,&--back {
-      p{
-        padding: 10px 40px;
+    &--front,
+    &--back {
+      width: 50vw;
+      margin: 0;
+      text-align: center;
+      font-size: 2.5em;
+      @include flex {
+        flex-direction: column;
       }
-     }
-   }
- }
+      &--skill {
+        font-size: 0.6em;
+        width: 30%;
+        border-radius: 10px;
+        line-height: none;
+        letter-spacing:0.6em;
+        text-decoration: underline;
+        text-transform: capitalize;
+      }
+    }
+  }
+  @include mobile {
+    &__title{
+      font-size: 8em;
+      text-align: center;
+      padding: 10px 10px 10px 0;
+    }
+    &__element {
+      @include flex {
+        flex-direction: column;
+      }
+
+      &--front,
+      &--back {
+        width: 100vw;
+        text-align: center;
+
+        &--skill, &--title{
+          width: 100vw;
+        }
+      }
+    }
+  }
 }
 
-
 // contact start
-.wrapper{
+.wrapper {
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -314,77 +343,75 @@ overflow: hidden;
   transition: all 1s;
 }
 
-.container{
+.container {
   width: 60vw;
   margin: 0 0 0 100px;
 
-  h1{
+  h1 {
     font-style: 3.5em;
     margin: 0;
   }
 
-  p{
+  p {
     font-size: 1.5em;
     margin: 0;
   }
 }
 
-.container-fluid{
+.container-fluid {
   width: 60vw;
-  margin: 0;  
+  margin: 0;
 }
 
-.btnExit{
+.btnExit {
   font-size: 3.5em;
   padding: 10px;
   border: 1px solid $color;
   width: 10%;
-  text-align:center;
+  text-align: center;
   margin: 10px;
-  &:hover{
+  &:hover {
     color: red;
     border: 1px solid red;
   }
 }
 
-@include mobile{
-  .wrapper{
+@include mobile {
+  .wrapper {
     overflow: hidden;
   }
 
-  .container{
+  .container {
     width: 100vw;
     margin: 0 0 0 10px;
 
-    h1{
+    h1 {
       font-size: 1.5em;
     }
-    p{
+    p {
       font-size: 1.2em;
     }
   }
-  .container-fluid{
+  .container-fluid {
     width: 100vw;
   }
 
-  .btnExit{
+  .btnExit {
     font-size: 2em;
     padding: 10px 30px 10px 20px;
   }
 
-  div.hero-content{
+  div.hero-content {
     margin: 0;
   }
 
-  div.textarea{
-    
+  div.textarea {
   }
 }
 // contact finish
 
-
-.about{
-  height:100vh;
+.about {
+  height: 100vh;
   position: absolute;
   margin: 0 !important;
   top: 0;
@@ -392,60 +419,56 @@ overflow: hidden;
   transform: translateY(-300vw);
   transition: all 1s;
   z-index: 1000;
-  &__desc{
+  &__desc {
     margin: 20px;
-    &--title{
+    &--title {
       font-size: 2.5em;
     }
 
-    &--details{
+    &--details {
       font-size: 1.1em;
       padding: 50px;
     }
 
-    &--motive{
+    &--motive {
       font-size: 2.5em;
     }
   }
 }
 
-
-@include mobile{
-  .about{
+@include mobile {
+  .about {
     margin: 20px 5px;
     width: 80vw;
     overflow: hidden;
-    &__desc{
-      text-align:center;
+    &__desc {
+      text-align: center;
       padding: 0;
-      &--title{
+      &--title {
         font-size: 3em;
         margin: 0;
       }
-      &--details{
+      &--details {
         text-align: center;
         font-size: 1.5em;
         text-align: center;
         padding: 0;
         font-size: 1em;
       }
-      
     }
   }
-
 }
 
-
-.footer{
+.footer {
   width: 100vw;
   height: 20vh;
   @include flex;
-  &__nav{
+  &__nav {
     width: 80vw;
-    @include flex(flex,space-evenly,center);
+    @include flex(flex, space-evenly, center);
     height: 20vh;
-    &--element{
-      a{
+    &--element {
+      a {
         font-size: 0.9em;
         @include link;
       }
@@ -453,14 +476,14 @@ overflow: hidden;
   }
 }
 
-p.hr{
+p.hr {
   width: 100%;
   border-top: 1px solid $color;
 }
 
-@include mobile{
-  .footer{
-    &__nav{
+@include mobile {
+  .footer {
+    &__nav {
       width: 100vw;
     }
   }

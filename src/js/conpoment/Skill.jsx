@@ -7,12 +7,12 @@ export default class Skill extends Component {
 
   render() {
     return (
-      <div className="skill">
+      <div className="skill" >
         <h1 className="skill__title">my skill</h1>
-        <div className="skill__element">
-          <div className="skill__element--front">
+        <div className="skill__element" >
+          <div className="skill__element--front" >
             <h2 className="skill__element--front--title">front-end</h2>
-            <p className="skill__element--front--skill">html</p>
+            <p className="skill__element--front--skill" >html</p>
             <p className="skill__element--front--skill">css</p>
             <p className="skill__element--front--skill">javascript</p>
             <p className="skill__element--front--skill">react</p>

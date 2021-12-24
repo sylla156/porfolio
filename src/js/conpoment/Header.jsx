@@ -61,8 +61,8 @@ export default class Header extends Component {
 
   render() {
     return (
-      <header className="header" id="up">
-        <div className="header__first">
+      <header className="header" id="up" data-aos="zoom-in" data-aos-duration="100">
+        <div className="header__first" data-aos="fade-down" data-aos-duration="2000">
           <div className="header__first--title" onClick={this.reload}>sylla ibrahim</div>
           <nav className="header__first--nav">
             <p className="header__first--nav--element">
@@ -82,7 +82,7 @@ export default class Header extends Component {
           </div>
         </div>
 
-        <div className="header__second">
+        <div className="header__second" data-aos="flip-down" data-aos-duration="500">
           <div className="header__second--element">
             <Typewriter
               words={[
@@ -97,7 +97,7 @@ export default class Header extends Component {
         <div className="navbar">
           <div className="navbar__exit" onClick={this.navOut}>
             <p className="navbar__exit--element1"></p>
-            
+
             <p className="navbar__exit--element2"></p>
           </div>
           <div className="navbar__link">
